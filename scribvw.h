@@ -19,11 +19,11 @@ protected: // create from serialization only
 // Attributes
 public:
 	CScribbleDoc* GetDocument();
-
+	 
 protected:
 	CStroke*    m_pStrokeCur;   // the stroke in progress
 	CPoint      m_ptPrev;       // the last mouse pt in the stroke in progress
-
+	std::unique_ptr<CPoint> m_ptPrev2;
 // Operations
 public:
         void ResyncScrollSizes();       // ensure scroll info is up-to-date
